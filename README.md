@@ -5,12 +5,14 @@
 |[Find best match][at01] | wrote this query for work, the purpose was to re-fill all the PO Box addresses with a physical address from the same table using the city |
 |[Cool record][at02]|Record is a primitive data type in M is very similar to a javascript object or a python dictionary. However I would say it's more like JS-objects with cool features, in this code I assigned functions to record properties.  |
  |[Udemy course exercises][at03] |about 70 exercises from alex kropf's course mammoth interactive in udemy, all my code  |
+|[Correct city name][at04] | Correcting a city name in a dataset with records and lists | |
 
 
-[at00]:https://github.com/attila5287/power-query-m-code/tree/main/ref/
-[at01]:https://github.com/attila5287/power-query-m-code/tree/main/ref/find-best-match.md
-[at02]:https://github.com/attila5287/power-query-m-code/tree/main/ref/cool-rec.md
-[at03]:https://github.com/attila5287/power-query-m-code/tree/main/ref/at-ex-dump.md
+[at00]:/ref/
+[at01]:/ref/find-best-match.md
+[at02]:/ref/cool-rec.md
+[at03]:/ref/at-ex-dump.md
+[at04]:/ref/correct-city.md
 
 [info0]:https://learn.microsoft.com/en-us/power-query/power-query-sdk-vs-code
 [info1]:https://marketplace.visualstudio.com/items?itemName=PowerQuery.vscode-powerquery-sdk

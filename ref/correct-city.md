@@ -1,8 +1,13 @@
+# Correct city with m-code
+
+pulled random address from `random-user-API`
+
+```JS
 let
 correctCities = (inputCity as text) as text =>
     let
         correctCityPairs = {
-            {"CO SPRINGS", "COLORADO SPRINGS"},
+            {"co springs", "COLORADO SPRINGS"},
             {"COLO SPGS", "COLORADO SPRINGS"},
             {"COLO SPRINGS", "COLORADO SPRINGS"},
             {"COLORAD SPGS", "COLORADO SPRINGS"},
@@ -84,3 +89,36 @@ res = addCityColumn
 // res = correctCities("senver")
 in
     res
+```
+# output 
+
+| City | Address | newCity| 
+| -- | -- |  -- | 
+|CO SPRINGS|975 Bandstand Promenade|COLORADO SPRINGS|
+|COLO SPGS|7501 De Greune|COLORADO SPRINGS|
+|COLO SPRINGS|5740 Royal Ln|COLORADO SPRINGS|
+|COLORAD SPGS|3472 Stanley Road|COLORADO SPRINGS|
+|COLORADO SPG|6882 Rua Santa Luzia|COLORADO SPRINGS|
+|COLORADO SPGS|6259 Rookery Road|COLORADO SPRINGS|
+|COLORADO SPRG|2281 Victoria Avenue|COLORADO SPRINGS|
+|COLORADO SPRI|3371 Church Street|COLORADO SPRINGS|
+|ELDORADO SPGS|502 Porodice Rankovic|ELDORADO SPRINGS|
+|FT COLLINS|2005 Milovana Niciforovica|FORT COLLINS|
+|FT MORGAN|308 Calle de La Almudena|FORT MORGAN|
+|GLENWOOD SPGS|3757 Kvitneva|GLENWOOD SPRINGS|
+|GLENWOOD SPRG|7648 Porsevej|GLENWOOD SPRINGS|
+|GR JUNCTION|415 Brattbakken|GRAND JUNCTION|
+|GRAND JCT|9781 Victoria Street|GRAND JUNCTION|
+|GRAND JCTION|3789 Alfred St|GRAND JUNCTION|
+|GRAND JUNCT|3274 Calle de Téllez|GRAND JUNCTION|
+|GRAND JUNCTIO|7899 Avenue de L'Abbé-Roussel|GRAND JUNCTION|
+|GRANDJUNCTION|4358 Railroad St|GRAND JUNCTION|
+|GRD JCT|5876 Woodland St|GRAND JUNCTION|
+|GRND JUNCTION|4793 Heibloemstraat|GRAND JUNCTION|
+|HOT SULPH SPG|5067 Avenue de L'Abbé-Roussel|HOT SULPHUR SPRINGS|
+|OLNEY SPRING|7666 Rovenskiy provulok|OLNEY SPRINGS|
+|PAGOSA SPRING|7750 Svyatoshinskiy provulok|PAGOSA SPRINGS|
+|PUEBO|9110 Ensjøsvingen|PUEBLO|
+|SENVER|3286 Rue du Cardinal-Gerlier|DENVER|
+|STAMBOAT SPG|3407 Green Rd|STEAMBOAT SPRINGS|
+|STEAMBOAT SPG|1684 Lunden|STEAMBOAT SPRINGS|

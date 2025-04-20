@@ -79,6 +79,9 @@ let
 in
     use_each_second
 
+```
+```JS
+
 // concatText
 (first_name, last_name, optional middle_name) => 
     Text.Combine(
@@ -210,12 +213,14 @@ let
     each_function = each _  +1    
 in
     each_function
+```
 
 // TransformTable
+```JS
 let
-    my_table = Excel.CurrentWorkbook(){
-        [Name = "CourseStudentTable"]
-    }[Content],
+    // my_table = Excel.CurrentWorkbook(){
+    //     [Name = "CourseStudentTable"]
+    // }[Content],
     result = Table.TransformColumns(
         my_table, 
         {
@@ -227,6 +232,7 @@ in
     result
 
 ```
+
 ```JS
 // AddNumberToStu
 let
