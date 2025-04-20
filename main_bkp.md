@@ -1,5 +1,6 @@
+```JS
 let
-// #region PQ SDK test env
+  // #region PQ SDK test env
   testInputTable = Table.FromRows(
     {
       {"Address","City","Zip"},
@@ -28,6 +29,7 @@ let
     },
     {"Column1","Column2","Column3"}
   ),
+  
   targetListPOBox = {
     "P. O ",
     "P.O. ",
@@ -36,9 +38,7 @@ let
     "P O B",
     "PO BO"
   },
-// #endregion 
 
-// #region helperBestMatch
   helperBestMatch = (inputTable as table, inputCity as text) => let
     src = inputTable,
     filtered = Table.SelectRows(
@@ -99,9 +99,7 @@ let
   in
     res
   ,
-// #endregion
-
-// #region MAIN
+  // #endregion
 
   // -------- M A I N  ----------
   changedType  = Table.TransformColumnTypes(
@@ -164,11 +162,12 @@ let
     }
   ),
 
-  sortedByFlag = Table.Sort(reOrderedCols, {{"isPOBox", Order.Descending}}),
-// #endregion
-
-  res = helperBestMatch(addFlagPOBox, "denver")
+  sortedByFlag = Table.Sort(
+    reOrderedCols, {{"isPOBox", Order.Descending}}
+  ),
   // res = sortedByFlag
   // res = listUniquePOBox(testPOBoxTable)
+  res = helperBestMatch(addFlagPOBox, "denver")
 in
     res
+```
