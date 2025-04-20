@@ -28,8 +28,16 @@ let
     },
     {"Column1","Column2","Column3"}
   ),
-  helperBestMatch = (inputTable as table, inputCity as text) =>
-  let
+  targetListPOBox = {
+    "P. O ",
+    "P.O. ",
+    "P.O.B",
+    "P. O.",
+    "P O B",
+    "PO BO"
+  },
+
+  helperBestMatch = (inputTable as table, inputCity as text) => let
     src = inputTable,
     filtered = Table.SelectRows(
       src, 
@@ -104,15 +112,7 @@ let
     {"Zip",     Text.Upper}
   }),
   
-  // targetListPOBox = listUniquePOBox(upperCaseAll),
-  targetListPOBox = {
-    "P. O ",
-    "P.O. ",
-    "P.O.B",
-    "P. O.",
-    "P O B",
-    "PO BO"
-  },
+
   addFlagPOBox = Table.AddColumn(
     upperCaseAll , "isPOBox", 
     each List.Contains( targetListPOBox, 
@@ -146,13 +146,13 @@ let
   reOrderedCols = Table.ReorderColumns(
     addBestMatchZip, 
     {
+      "isPOBox",
       "BestMatchAddress",  
       "BestMatchCity",  
       "BestMatchZip",  
       "Address", 
       "City", 
-      "Zip", 
-      "isPOBox"
+      "Zip" 
     }
   ),
 
