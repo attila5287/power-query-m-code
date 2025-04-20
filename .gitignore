@@ -1,4 +1,4 @@
-bkp/*.md
+ref/bkup/*.md
 bin/AnyCPU/Debug/*.mez
 bin/AnyCPU/Debug/main.mez
 bin/AnyCPU/Debug/test38.mez
