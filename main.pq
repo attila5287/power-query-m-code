@@ -25,5 +25,12 @@ main.Publish = [
     Beta = true,
     Category = "Other",
     ButtonText = { Extension.LoadString("ButtonTitle"), Extension.LoadString("ButtonHelp") },
-    LearnMoreUrl = "https://powerbi.microsoft.com/"
+    LearnMoreUrl = "https://powerbi.microsoft.com/",
+    SourceImage = main.Icons,
+    SourceTypeImage = main.Icons
+];
+
+main.Icons = [
+    Icon16 = { Extension.Contents("main16.png"), Extension.Contents("main20.png"), Extension.Contents("main24.png"), Extension.Contents("main32.png") },
+    Icon32 = { Extension.Contents("main32.png"), Extension.Contents("main40.png"), Extension.Contents("main48.png"), Extension.Contents("main64.png") }
 ];

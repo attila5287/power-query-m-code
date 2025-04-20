@@ -1,11 +1,3 @@
-### backup before implement FIND_UNIQUE_CITIES
-
-`this query works with our raw input qry03 from access db`
-`with the new imp we need to transform our raw input to get`
-`rid of repetiting city names so we would be able to`
-`find more matches (ex:Grnd Jct doesn't match Grand Junction)`
-
-```JS
 let
 // #region PQ SDK test env
   Source = Table.FromRows(
@@ -182,4 +174,3 @@ let
   // res = listUniquePOBox(testPOBoxTable)
 in
     res
- ```
