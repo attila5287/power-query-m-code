@@ -65,9 +65,12 @@ let
         ]
       ]
     ),
-    
+    addTruncZip = Table.AddColumn(
+      filtered, "truncZip", 
+      each Text.Start([truncZip], 5)
+    ),
     grouped = Table.Group(
-      filtered, {"City", "Address", "Zip"}, 
+      addTruncZip, {"City", "Address", "truncZip"}, 
       {{"Count", each Table.RowCount(_), type number}}
     ),
 
